@@ -5,14 +5,13 @@ if (window.localStorage.getItem("client") !== null){
 function foo(){
     const username = document.querySelector("#username").value;
     const password = document.querySelector("#password").value;
-    const button = document.querySelector("#login-button");
     
     if (username === "" && password === "") console.error("Invalid inputs");
     else if (username === "") console.error("Invalid username");
     else if (password === "") console.error("Invalid password");
     else{
-        window.localStorage.setItem("client", `{"username": ${username}, "password": ${password}}`);
-        button.onclick = () => console.log("Already logged in");
+        window.localStorage.setItem("client", `{"username": "${username}", "password": "${password}"}`);
+        document.querySelector("#login-button").onclick = () => console.log("Already logged in");
     }
 }
 
