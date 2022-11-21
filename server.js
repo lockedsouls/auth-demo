@@ -10,4 +10,5 @@ app.route("/")
         res.sendFile(path.join(`${__dirname}/views/index.html`));
     });
 
-app.listen(3000, "192.168.1.5", () => console.log("Server started"));
+// app.listen(3000, "192.168.1.5", () => console.log("Server started")); //LAN HOST
+app.listen(3000, () => console.log("Server started")); //localhost HOST
