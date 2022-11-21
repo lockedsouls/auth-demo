@@ -37,3 +37,8 @@ html, body{
 #container-inputs > button{
     padding: 10px;
 }
+
+#container-inputs > input.disabled{
+    background-color: rgb(177, 177, 177);
+    pointer-events: none;
+}
