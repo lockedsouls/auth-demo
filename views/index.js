@@ -34,3 +34,18 @@ function LogOut(){
     username.classList.remove("disabled"); username.value = ""; username.placeholder = "Username";
     password.classList.remove("disabled"); password.value = ""; password.placeholder = "Password";
 }
+
+function password_visiblity(){
+    const password = document.querySelector("#password");
+    const span = document.querySelector("span");
+    span.onclick = () => {
+        if (span.innerHTML == "Show"){
+            password.type = "text";
+            span.innerHTML = "Hide";
+        }else{
+            password.type = "password";
+            span.innerHTML = "Show";
+        }
+    }
+}
+password_visiblity();

@@ -10,11 +10,14 @@
 </head>
 <body style="background-color: #334756">
     <div id="container">
-        <div id="password-div">
-            <input>
-            <!--fix span background-->
-            <span>Show</span>
+        <div id="input-div">
+            <input id="username" placeholder="Username">
         </div>
+        <div id="input-div">
+            <input id="password" type="password" placeholder="Password">
+            <span class="not-selectable">Show</span>
+        </div>
+        <button id="login-button" onclick="foo()">Log in</button>
     </div>
 </body>
 </html>
