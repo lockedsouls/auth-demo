@@ -1,6 +1,11 @@
 html, body{
     margin: 0;
     padding: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 *{
     box-sizing: border-box; 
@@ -9,36 +14,32 @@ html, body{
 #container{
     display: flex;
     flex-direction: column;
-    width: 100vw;
-    height: 100vh;
     justify-content: center;
     align-items: center;
-}
-
-#container-inputs{
-    display: flex;
-    flex-direction: column;
-    width: 20vw;
+    min-width: 150px;
+    width: 350px;
+    height: 350px;
     border: 2px solid black;
-    padding: 20px;
-    box-shadow: 1px 1px;
-    background-color: #3e576a;
+    border-radius: 15px;
 }
 
-#container-inputs > input{
-    transition: background-color 0.2s;
-    margin-bottom: 15px;
-    padding: 10px;
-}
-#container-inputs > input:focus{
-    background-color: rgb(233, 233, 233);
+#password-div{
+    position: relative;
+    width: 250px;
+    height: 25px;
 }
 
-#container-inputs > button{
-    padding: 10px;
+#password-div input{
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }
 
-#container-inputs > input.disabled{
-    background-color: rgb(177, 177, 177);
-    pointer-events: none;
+#password-div span{
+    display: inline-block;
+    background-color: white;
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    right: 4px;
 }
